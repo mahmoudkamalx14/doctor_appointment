@@ -12,6 +12,35 @@ The **Doctor Appointment** app allows users to easily book appointments with doc
 - **Rate Doctors**: Provide ratings and reviews for doctors after appointments.
 - **Notifications**: Receive reminders for appointments and updates on appointment status.
 
+## Technologies and Languages Used
+
+The app is built using the following technologies and programming languages:
+
+- **Frontend**: 
+  - Flutter framework for cross-platform mobile app development
+  - Dart programming language
+
+- **Backend**:
+  - RESTful APIs
+
+- **Database**:
+  - Shared Pref for storing user and appointment data
+
+- **Other Technologies**:
+  - Flutter Bloc for state management
+
+## Packages Used
+
+The app utilizes several packages to enhance functionality:
+
+- **Flutter Bloc**: For handling state management
+- **Retrofit**: For making HTTP requests to the backend
+- **get_it**: For handling dependency injection in app
+- **Freezed**: For Code generation for immutable classes that has a simple syntax/API
+- **Device Preview**: For testing Dart code for Responsive UI
+- **flutter_screenutil**: To build Responsive UI 
+- **Json_serializable**: Automatically generate code for converting to and from JSON by annotating Dart classes.
+
 ## Screenshots and Demo
 
 Here are some screenshots and a demo of the app to give you an overview of its features and user interface:
@@ -44,14 +73,6 @@ Watch a quick demo of how the app works: [Link to Demo Video](path/to/demo_video
 3. **Search and Book Appointments**: Use the search feature to find suitable doctors and book an appointment.
 4. **Manage Appointments**: Go to the "Appointments" section to view and manage your booked appointments.
 
-## Contribution
-
-We welcome contributions to improve the app. Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch for your contribution.
-3. Add features or fix bugs.
-4. Submit a Pull Request.
 
 ## Support
 
