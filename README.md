@@ -12,6 +12,30 @@ The **Doctor Appointment** app allows users to easily book appointments with doc
 - **Rate Doctors**: Provide ratings and reviews for doctors after appointments.
 - **Notifications**: Receive reminders for appointments and updates on appointment status.
 
+## Screenshots and Demo
+
+Here are some screenshots and a demo of the app to give you an overview of its features and user interface:
+
+### Screenshots
+
+![Authentication Screens]
+*Description of the Authentication Screen.*
+![Screenshot_1721745078](https://github.com/user-attachments/assets/b66617fd-4764-4872-a089-e7be6dfadc04)
+![Screenshot_1721745069](https://github.com/user-attachments/assets/f0d51e30-0eda-48d8-a309-d944f9e19096)
+
+![Home Screen](path/to/home_screen.png)
+*Description of the Home Screen.*
+
+![Doctor Search](path/to/doctor_search.png)
+*Description of the Doctor Search feature.*
+
+![Booking Confirmation](path/to/booking_confirmation.png)
+*Description of the Booking Confirmation page.*
+
+### Demo
+
+Watch a quick demo of how the app works: [Link to Demo Video](path/to/demo_video.mp4)
+
 ## Requirements
 
 - **Operating System**: iOS 12.0 or higher, Android 5.0 or higher
