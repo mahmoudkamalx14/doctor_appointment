@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/theme/colors.dart';
-import 'package:doctor_appointment/core/theme/styles.dart';
+import 'package:doctor_appointment/core/theme/app_styles.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowerCase;

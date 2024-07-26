@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/routes/routes.dart';
 import '../../../../core/theme/colors.dart';
-import '../../../../core/theme/styles.dart';
+import '../../../../core/theme/app_styles.dart';
 import '../../logic/register/sign_up_cubit.dart';
 import '../../logic/register/sign_up_state.dart';
 

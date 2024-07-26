@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:doctor_appointment/core/theme/styles.dart';
+import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocLogoAndName extends StatelessWidget {

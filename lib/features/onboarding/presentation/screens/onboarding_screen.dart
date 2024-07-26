@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
-import 'package:doctor_appointment/core/theme/styles.dart';
+import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/doc_logo_and_name.dart';

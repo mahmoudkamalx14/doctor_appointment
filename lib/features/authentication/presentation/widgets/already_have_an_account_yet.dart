@@ -2,7 +2,7 @@ import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:doctor_appointment/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/styles.dart';
+import '../../../../core/theme/app_styles.dart';
 
 class AlreadyHaveAnAccountYet extends StatelessWidget {
   const AlreadyHaveAnAccountYet({
