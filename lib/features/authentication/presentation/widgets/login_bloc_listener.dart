@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:doctor_appointment/core/routes/routes.dart';
 import 'package:doctor_appointment/core/theme/colors.dart';
-import 'package:doctor_appointment/core/theme/styles.dart';
+import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:doctor_appointment/features/authentication/logic/login/login_cubit.dart';
 import 'package:doctor_appointment/features/authentication/logic/login/login_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +27,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (data) {
             context.pop();
-            context.navigateToReplacement(Routes.homeScreen);
+            context.navigateToReplacement(Routes.navBarScreen);
           },
           error: (error) {
             setupErrorState(context, error);

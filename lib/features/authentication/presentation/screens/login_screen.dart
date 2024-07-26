@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
-import 'package:doctor_appointment/core/theme/styles.dart';
+import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:doctor_appointment/core/widgets/app_text_button.dart';
 import 'package:doctor_appointment/features/authentication/logic/login/login_cubit.dart';
 import 'package:doctor_appointment/features/authentication/presentation/widgets/already_have_an_account_yet.dart';

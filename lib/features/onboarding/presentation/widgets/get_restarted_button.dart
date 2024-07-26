@@ -3,7 +3,7 @@ import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:doctor_appointment/core/routes/routes.dart';
 import 'package:doctor_appointment/core/theme/colors.dart';
 
-import '../../../../core/theme/styles.dart';
+import '../../../../core/theme/app_styles.dart';
 
 class GetRestartedButton extends StatelessWidget {
   const GetRestartedButton({super.key});

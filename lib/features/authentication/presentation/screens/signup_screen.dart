@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theme/styles.dart';
+import '../../../../core/theme/app_styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import '../widgets/terms_and_conditions.dart';
 import '../../logic/register/sign_up_cubit.dart';
