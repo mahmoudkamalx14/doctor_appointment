@@ -1,4 +1,4 @@
-import 'package:doctor_appointment/features/authentication/data/apis/auth_service.dart';
+import 'package:doctor_appointment/features/authentication/data/services/auth_service.dart';
 import 'package:doctor_appointment/features/authentication/data/models/auth_respone.dart';
 
 import '../../../../core/networking/api_error_handler.dart';

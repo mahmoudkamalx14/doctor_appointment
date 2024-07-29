@@ -6,6 +6,7 @@ import 'package:doctor_appointment/features/chats/messages_screen.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/home_screen.dart';
 import 'package:doctor_appointment/features/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -31,9 +32,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        backgroundColor: const Color(0xFF247CFF),
         child: const Icon(
           Icons.search,
           size: 30,
+          color: Colors.white,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -49,12 +52,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
         activeColor: const Color(0xFF247CFF),
         inactiveColor: Colors.black,
         gapLocation: GapLocation.center,
+        gapWidth: 40.w,
         splashColor: Colors.white,
-        // currentIndex: currentIndex,
-        // showUnselectedLabels: false,
-        // showSelectedLabels: false,
         activeIndex: currentIndex,
-
         elevation: 0,
         onTap: (value) {
           setState(() {
