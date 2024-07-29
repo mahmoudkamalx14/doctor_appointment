@@ -1,12 +1,18 @@
+import 'package:doctor_appointment/core/functions/get_doctor_image.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../data/models/specialization_response_model.dart';
+
 class ItemRecommendationDoctor extends StatelessWidget {
   const ItemRecommendationDoctor({
     super.key,
+    required this.doctor,
   });
+
+  final Doctor doctor;
 
   @override
   Widget build(BuildContext context) {
@@ -17,37 +23,46 @@ class ItemRecommendationDoctor extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            horizontalSpace(8),
-            Image.asset('assets/images/imageDocdor.png'),
+            Expanded(
+              flex: 1,
+              child: Image.asset(getDoctorImage(doctor.gender!)),
+            ),
             horizontalSpace(16),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Dr. Randy Wigham',
-                  style: TextStyles.style16Bold,
-                ),
-                verticalSpace(8),
-                Text(
-                  'General | RSUD Gatot Subroto',
-                  style: TextStyles.style12Medium,
-                ),
-                verticalSpace(13),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.yellow,
-                      size: 19,
-                    ),
-                    Text(
-                      ' 4.8 (4,279 reviews)',
-                      style: TextStyles.style12Medium,
-                    ),
-                  ],
-                ),
-              ],
+            Expanded(
+              flex: 2,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    doctor.name!,
+                    style: TextStyles.style16Bold,
+                  ),
+                  verticalSpace(8),
+                  Text(
+                    '${doctor.specialization!.name} | ${doctor.phone}',
+                    style: TextStyles.style12Medium,
+                  ),
+                  verticalSpace(13),
+                  Text(
+                    '${doctor.email}',
+                    style: TextStyles.style12Medium,
+                  ),
+                  // Row(
+                  //   children: [
+                  //     const Icon(
+                  //       Icons.star,
+                  //       color: Colors.yellow,
+                  //       size: 19,
+                  //     ),
+                  //     Text(
+                  //       ' 4.8 (4,279 reviews)',
+                  //       style: TextStyles.style12Medium,
+                  //     ),
+                  //   ],
+                  // ),
+                ],
+              ),
             ),
           ],
         ),

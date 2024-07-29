@@ -1,6 +1,7 @@
 import 'package:doctor_appointment/core/functions/build_page_route.dart';
 import 'package:doctor_appointment/features/appointment/appointments_screen.dart';
 import 'package:doctor_appointment/features/chats/messages_screen.dart';
+import 'package:doctor_appointment/features/home/logic/home_cubit.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/bottom_nav_bar.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/doctor_speciality_screen.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/notifications_screen.dart';
@@ -23,8 +24,10 @@ class AppRouter {
 
     switch (routeName) {
       case Routes.onBoardingScreen:
-        return smoothEaseInOutPageRoute(const OnBoardingScreen(),
-            settings: settings);
+        return smoothEaseInOutPageRoute(
+          const OnBoardingScreen(),
+          settings: settings,
+        );
 
       case Routes.loginScreen:
         return smoothEaseInOutPageRoute(
@@ -46,13 +49,19 @@ class AppRouter {
 
       case Routes.navBarScreen:
         return smoothEaseInOutPageRoute(
-          const BottomNavBar(),
+          BlocProvider(
+            create: (context) => getIt<HomeCubit>()..getDataSpecialization(),
+            child: const BottomNavBar(),
+          ),
           settings: settings,
         );
 
       case Routes.homeScreen:
         return smoothEaseInOutPageRoute(
-          const HomeScreen(),
+          BlocProvider(
+            create: (context) => getIt<HomeCubit>()..getDataSpecialization(),
+            child: const HomeScreen(),
+          ),
           settings: settings,
         );
 
@@ -82,7 +91,10 @@ class AppRouter {
 
       case Routes.doctorSpecialityScreen:
         return smoothEaseInOutPageRoute(
-          const DoctorSpecialityScreen(),
+          BlocProvider(
+            create: (context) => getIt<HomeCubit>(),
+            child: const DoctorSpecialityScreen(),
+          ),
           settings: settings,
         );
 

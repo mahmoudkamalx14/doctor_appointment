@@ -6,8 +6,13 @@ import 'package:doctor_appointment/features/home/presentation/widgets/Item_docto
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../data/models/specialization_response_model.dart';
+
 class DoctorSpecialityListView extends StatelessWidget {
-  const DoctorSpecialityListView({super.key});
+  const DoctorSpecialityListView(
+      {super.key, required this.specializationDataList});
+
+  final List<SpecializationData?> specializationDataList;
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +41,15 @@ class DoctorSpecialityListView extends StatelessWidget {
         SizedBox(
           height: 100.h,
           child: ListView.builder(
-            itemCount: 6,
+            itemCount: specializationDataList.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.only(right: 8.w, left: 8.w),
-                child: const ItemDoctorSpeciality(),
+                child: ItemDoctorSpeciality(
+                  specializationData: specializationDataList[index],
+                  itemIndex: index,
+                ),
               );
             },
           ),

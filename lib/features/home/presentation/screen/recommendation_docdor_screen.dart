@@ -1,7 +1,6 @@
 import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/widgets/app_text_form_field.dart';
 import 'package:doctor_appointment/core/widgets/custom_appbar.dart';
-import 'package:doctor_appointment/features/home/presentation/widgets/item_recommendation_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -37,17 +36,17 @@ class RecommendationDocdorScreen extends StatelessWidget {
                 ],
               ),
               verticalSpace(24),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 10,
-                  scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index) => const Card(
-                    elevation: 1,
-                    color: Colors.white,
-                    child: ItemRecommendationDoctor(),
-                  ),
-                ),
-              ),
+              // Expanded(
+              //   child: ListView.builder(
+              //     itemCount: 10,
+              //     scrollDirection: Axis.vertical,
+              //     itemBuilder: (context, index) => const Card(
+              //       elevation: 1,
+              //       color: Colors.white,
+              //       child: ItemRecommendationDoctor(),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

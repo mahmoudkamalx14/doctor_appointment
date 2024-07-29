@@ -2,11 +2,15 @@ import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:doctor_appointment/core/routes/routes.dart';
 import 'package:doctor_appointment/core/theme/app_styles.dart';
-import 'package:doctor_appointment/features/home/presentation/widgets/item_recommendation_doctor.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/models/specialization_response_model.dart';
+import 'item_recommendation_doctor.dart';
+
 class RecommendationDoctorsListView extends StatelessWidget {
-  const RecommendationDoctorsListView({super.key});
+  const RecommendationDoctorsListView({super.key, required this.doctorList});
+
+  final List<Doctor> doctorList;
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +38,11 @@ class RecommendationDoctorsListView extends StatelessWidget {
         verticalSpace(16),
         Expanded(
           child: ListView.builder(
-            itemCount: 6,
+            itemCount: doctorList.length,
             scrollDirection: Axis.vertical,
-            itemBuilder: (context, index) => const ItemRecommendationDoctor(),
+            itemBuilder: (context, index) => ItemRecommendationDoctor(
+              doctor: doctorList[index],
+            ),
           ),
         ),
       ],
