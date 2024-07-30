@@ -31,9 +31,10 @@ class OnBoardingScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                        'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-                        style: TextStyles.font13GrayRegluar,
-                        textAlign: TextAlign.center),
+                      'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
+                      style: TextStyles.font13GrayRegluar,
+                      textAlign: TextAlign.center,
+                    ),
                     verticalSpace(18),
                     const GetRestartedButton(),
                   ],

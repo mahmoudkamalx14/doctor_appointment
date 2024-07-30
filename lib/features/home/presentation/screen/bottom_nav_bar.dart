@@ -42,7 +42,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       bottomNavigationBar: AnimatedBottomNavigationBar(
-        height: 80,
+        height: 64.h,
         icons: const [
           Icons.home,
           Icons.mark_unread_chat_alt_sharp,
