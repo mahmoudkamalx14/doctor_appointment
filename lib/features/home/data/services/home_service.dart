@@ -10,5 +10,8 @@ abstract class HomeService {
   factory HomeService(Dio dio, {String baseUrl}) = _HomeService;
 
   @GET(ApiConstants.homeSpecialization)
-  Future<SpecializationResponseModel> getDataSpecialization();
+  Future<SpecializationResponseModel> getDataSpecialization(
+    @Header("Accept") String accept,
+    @Header("Authorization") String token,
+  );
 }

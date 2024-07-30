@@ -1,4 +1,7 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:doctor_appointment/core/cache/cache_helper.dart';
+import 'package:doctor_appointment/core/cache/constants.dart';
+import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/routes/app_router.dart';
 import 'package:doctor_appointment/core/routes/routes.dart';
@@ -23,7 +26,7 @@ class DocApp extends StatelessWidget {
         title: 'Doc App',
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: getInitialRoute(),
         onGenerateRoute: appRouter.generateRoute,
         theme: ThemeData(
           primaryColor: ColorsManager.mainBlue,
@@ -31,5 +34,23 @@ class DocApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String getInitialRoute() {
+    if (isLoggedInUser == false) {
+      return Routes.onBoardingScreen;
+    } else {
+      return Routes.navBarScreen;
+    }
+  }
+
+  checkIfLoggedInUser() async {
+    String? userToken =
+        await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+    if (!userToken.isNullOrEmpty()) {
+      isLoggedInUser = true;
+    } else {
+      isLoggedInUser = false;
+    }
   }
 }

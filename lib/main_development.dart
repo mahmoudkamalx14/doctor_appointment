@@ -5,19 +5,20 @@ import 'package:doctor_appointment/doc_app.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
-  setupGetIt();
+  WidgetsFlutterBinding.ensureInitialized();
 
+  setupGetIt();
   // Add this line
   await ScreenUtil.ensureScreenSize();
   runApp(
-      // DevicePreview(
-      //   enabled: !kReleaseMode,
-      //   builder: (context) => DocApp(appRouter: AppRouter()),
-      // ),
+    // DevicePreview(
+    //   enabled: !kReleaseMode,
+    //   builder: (context) => DocApp(appRouter: AppRouter()),
+    // ),
 
-      DocApp(appRouter: AppRouter()));
+    DocApp(appRouter: AppRouter()),
+  );
 }
-
 
 
 //! dart run build_runner build --delete-conflicting-outputs
