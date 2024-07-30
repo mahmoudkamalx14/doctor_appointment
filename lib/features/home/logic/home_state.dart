@@ -8,13 +8,21 @@ part 'home_state.freezed.dart';
 class HomeState with _$HomeState {
   const factory HomeState.initial() = _Initial;
 
-  const factory HomeState.getDataSpecializationloading() =
-      GetDataSpecializationloading;
+  const factory HomeState.loading() = Loading;
 
-  const factory HomeState.getDataSpecializationError(
-      {required ErrorHandler error}) = GetDataSpecializationError;
+  /// Specializations
 
-  const factory HomeState.getDataSpecializationSuccess(
-          SpecializationResponseModel specializationResponseModel) =
-      GetDataSpecializationSuccess;
+  const factory HomeState.specializationSuccess(
+      List<SpecializationData?>? specializationList) = SpecializationSuccess;
+
+  const factory HomeState.specializationError({required ErrorHandler error}) =
+      SpecializationError;
+
+  /// Doctors
+
+  const factory HomeState.doctorsSuccess(List<Doctor?>? doctorsList) =
+      DoctorsSuccess;
+
+  const factory HomeState.doctorsError({required ErrorHandler error}) =
+      DoctorsError;
 }

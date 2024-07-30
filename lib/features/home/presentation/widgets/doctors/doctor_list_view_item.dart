@@ -4,10 +4,10 @@ import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../data/models/specialization_response_model.dart';
+import '../../../data/models/specialization_response_model.dart';
 
-class ItemRecommendationDoctor extends StatelessWidget {
-  const ItemRecommendationDoctor({
+class DoctorsListViewItem extends StatelessWidget {
+  const DoctorsListViewItem({
     super.key,
     required this.doctor,
   });
@@ -48,19 +48,6 @@ class ItemRecommendationDoctor extends StatelessWidget {
                     '${doctor.email}',
                     style: TextStyles.style12Medium,
                   ),
-                  // Row(
-                  //   children: [
-                  //     const Icon(
-                  //       Icons.star,
-                  //       color: Colors.yellow,
-                  //       size: 19,
-                  //     ),
-                  //     Text(
-                  //       ' 4.8 (4,279 reviews)',
-                  //       style: TextStyles.style12Medium,
-                  //     ),
-                  //   ],
-                  // ),
                 ],
               ),
             ),
