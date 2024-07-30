@@ -1,3 +1,5 @@
+import 'package:doctor_appointment/core/cache/cache_helper.dart';
+import 'package:doctor_appointment/core/cache/constants.dart';
 import 'package:doctor_appointment/core/networking/api_error_handler.dart';
 import 'package:doctor_appointment/core/networking/api_result.dart';
 import 'package:doctor_appointment/features/home/data/models/specialization_response_model.dart';
@@ -9,7 +11,9 @@ class HomeRepo {
   HomeRepo(this._homeService);
 
   Future<ApiResult<SpecializationResponseModel>> getDataSpecialization() async {
-    final response = await _homeService.getDataSpecialization();
+    final response = await _homeService.getDataSpecialization(
+        "application/json",
+        "Bearer ${await SharedPrefHelper.getString(SharedPrefKeys.userToken)}");
 
     try {
       return ApiResult.success(response);

@@ -1,3 +1,5 @@
+import 'package:doctor_appointment/core/cache/cache_helper.dart';
+import 'package:doctor_appointment/core/cache/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/features/authentication/data/models/login_request_body.dart';
 import 'package:doctor_appointment/features/authentication/data/repos/login_repo.dart';
@@ -19,18 +21,22 @@ class LoginCubit extends Cubit<LoginState> {
 
     final response = await _loginRepo.login(
       LoginRequestBody(
-        email: emailController.text,
-        password: passwordController.text,
-      ),
+          email: emailController.text, password: passwordController.text),
     );
 
     response.when(
       success: (loginResponse) {
+        saveUserToken(loginResponse.userData!.token ?? '');
+
         emit(LoginState.success(loginResponse));
       },
       failure: (error) {
         emit(LoginState.error(error: error.apiErrorModel.message!));
       },
     );
+  }
+
+  saveUserToken(String token) {
+    SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
   }
 }
