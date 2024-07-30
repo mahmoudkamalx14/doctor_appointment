@@ -7,6 +7,7 @@ import 'package:doctor_appointment/features/home/presentation/screen/home_screen
 import 'package:doctor_appointment/features/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -34,7 +35,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         onPressed: () {},
         backgroundColor: const Color(0xFF247CFF),
         child: const Icon(
-          Icons.search,
+          FontAwesomeIcons.search,
           size: 30,
           color: Colors.white,
         ),
@@ -44,13 +45,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
       bottomNavigationBar: AnimatedBottomNavigationBar(
         height: 64.h,
         icons: const [
-          Icons.home,
-          Icons.mark_unread_chat_alt_sharp,
-          Icons.vertical_shades_closed_sharp,
-          Icons.person_2_outlined,
+          FontAwesomeIcons.houseChimneyMedical,
+          FontAwesomeIcons.message,
+          FontAwesomeIcons.calendarDays,
+          FontAwesomeIcons.user,
         ],
         activeColor: const Color(0xFF247CFF),
-        inactiveColor: Colors.black,
+        inactiveColor: Colors.grey[700],
         gapLocation: GapLocation.center,
         gapWidth: 40.w,
         splashColor: Colors.white,
