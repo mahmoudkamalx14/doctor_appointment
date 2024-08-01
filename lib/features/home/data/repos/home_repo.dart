@@ -13,7 +13,7 @@ class HomeRepo {
   Future<ApiResult<SpecializationResponseModel>> getDataSpecialization() async {
     final response = await _homeService.getDataSpecialization(
         "application/json",
-        "Bearer ${await SharedPrefHelper.getString(SharedPrefKeys.userToken)}");
+        "Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}");
 
     try {
       return ApiResult.success(response);
