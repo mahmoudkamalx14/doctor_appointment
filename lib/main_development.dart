@@ -1,3 +1,6 @@
+import 'package:doctor_appointment/core/cache/cache_helper.dart';
+import 'package:doctor_appointment/core/cache/constants.dart';
+import 'package:doctor_appointment/core/routes/extentions.dart';
 import 'package:flutter/material.dart';
 import 'package:doctor_appointment/core/di/dependency_injection.dart';
 import 'package:doctor_appointment/core/routes/app_router.dart';
@@ -10,6 +13,7 @@ void main() async {
   setupGetIt();
   // Add this line
   await ScreenUtil.ensureScreenSize();
+  await checkIfLoggedInUser();
   runApp(
     // DevicePreview(
     //   enabled: !kReleaseMode,
@@ -20,6 +24,15 @@ void main() async {
   );
 }
 
+checkIfLoggedInUser() async {
+  String? userToken =
+      await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
+  if (!userToken.isNullOrEmpty()) {
+    isLoggedInUser = true;
+  } else {
+    isLoggedInUser = false;
+  }
+}
 
 //! dart run build_runner build --delete-conflicting-outputs
 

@@ -37,6 +37,6 @@ class LoginCubit extends Cubit<LoginState> {
   }
 
   saveUserToken(String token) {
-    SharedPrefHelper.setData(SharedPrefKeys.userToken, token);
+    SharedPrefHelper.setSecuredString(SharedPrefKeys.userToken, token);
   }
 }
