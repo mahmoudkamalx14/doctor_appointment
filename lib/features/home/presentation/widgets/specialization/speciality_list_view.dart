@@ -33,6 +33,7 @@ class _SpecialityListViewState extends State<SpecialityListView> {
           height: 115.h,
           child: ListView.builder(
             itemCount: widget.specializationDataList.length,
+            primary: true,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return Padding(

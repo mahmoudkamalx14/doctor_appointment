@@ -62,7 +62,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             currentIndex = value;
           });
         },
-        iconSize: 36,
+        iconSize: 28,
         backgroundColor: Colors.white,
       ),
     );

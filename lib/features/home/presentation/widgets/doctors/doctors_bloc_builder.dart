@@ -1,6 +1,6 @@
 import 'package:doctor_appointment/features/home/logic/home_cubit.dart';
 import 'package:doctor_appointment/features/home/logic/home_state.dart';
-import 'package:doctor_appointment/features/home/presentation/widgets/doctors/recommendation_doctors_list_view.dart';
+import 'package:doctor_appointment/features/home/presentation/widgets/doctors/doctors_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

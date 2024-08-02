@@ -2,7 +2,7 @@ import 'package:doctor_appointment/core/functions/build_page_route.dart';
 import 'package:doctor_appointment/features/appointment/appointments_screen.dart';
 import 'package:doctor_appointment/features/chats/messages_screen.dart';
 import 'package:doctor_appointment/features/home/logic/home_cubit.dart';
-import 'package:doctor_appointment/features/home/presentation/screen/bottom_nav_bar.dart';
+import 'package:doctor_appointment/features/onboarding/presentation/screens/bottom_nav_bar.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/doctor_speciality_screen.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/notifications_screen.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/recommendation_docdor_screen.dart';
@@ -59,7 +59,7 @@ class AppRouter {
       case Routes.homeScreen:
         return smoothEaseInOutPageRoute(
           BlocProvider(
-            create: (context) => getIt<HomeCubit>()..getDataSpecialization(),
+            create: (context) => getIt<HomeCubit>(),
             child: const HomeScreen(),
           ),
           settings: settings,

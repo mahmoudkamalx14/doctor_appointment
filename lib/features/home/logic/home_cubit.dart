@@ -10,16 +10,18 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo _homeRepo;
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
 
-  HomeCubit get(context) => BlocProvider.of(context);
+  static HomeCubit get(context) => BlocProvider.of(context);
 
   List<SpecializationData?>? specializationList = [];
 
   void getDataSpecialization() async {
+    emit(const HomeState.loading());
+
     final response = await _homeRepo.getDataSpecialization();
 
     response.when(
       success: (specializationResponseModel) {
-        specializationList = specializationResponseModel.data ?? [];
+        specializationList = specializationResponseModel.data;
 
         getDoctorList(specializationId: specializationList?.first?.id);
 
