@@ -54,8 +54,7 @@ Here are some screenshots and a demo of the app to give you an overview of its f
 
 ### Home
 <img src="https://github.com/user-attachments/assets/9f979c5d-f1cc-4b79-a21e-7fa9fb8bb2a9" alt="Authentication Screen" width="290"/>
-<img src="https://github.com/user-attachments/assets/02611242-85fb-483c-9e92-186a184b8259" alt="Authentication Screen" width="290"/>
-
+<img src="" alt="[Authentication Screen](https://github.com/user-attachments/assets/65b82b96-48d5-4d73-8c48-bcd43e7825ea)" width="290"/>
 
 
 ### Demo
