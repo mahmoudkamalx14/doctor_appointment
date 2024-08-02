@@ -52,13 +52,10 @@ Here are some screenshots and a demo of the app to give you an overview of its f
 <img src="https://github.com/user-attachments/assets/f0d51e30-0eda-48d8-a309-d944f9e19096" alt="Authentication Screen" width="290"/>
 <img src="https://github.com/user-attachments/assets/b66617fd-4764-4872-a089-e7be6dfadc04" alt="Authentication Screen" width="290"/>
 
-### Authentication Screens
-<img src="https://github.com/user-attachments/assets/4cae0548-1925-441c-9f90-4d97cc3f5099" alt="Authentication Screen" width="290"/>
-<img src="https://github.com/user-attachments/assets/f0d51e30-0eda-48d8-a309-d944f9e19096" alt="Authentication Screen" width="290"/>
-
 ### Home
-<img src="https://github.com/user-attachments/assets/02611242-85fb-483c-9e92-186a184b8259" alt="Authentication Screen" width="290"/>
 <img src="https://github.com/user-attachments/assets/9f979c5d-f1cc-4b79-a21e-7fa9fb8bb2a9" alt="Authentication Screen" width="290"/>
+<img src="https://github.com/user-attachments/assets/02611242-85fb-483c-9e92-186a184b8259" alt="Authentication Screen" width="290"/>
+
 
 
 ### Demo
