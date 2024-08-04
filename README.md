@@ -46,6 +46,8 @@ The app utilizes several packages to enhance functionality:
 Here are some screenshots and a demo of the app to give you an overview of its features and user interface:
 
 ### Splash and Onboarding
+
+<img src="https://github.com/user-attachments/assets/9ca2b915-5d11-4b1e-8fb6-a76778e0ba66" alt="Splash and Onboarding Screen" width="290"/>
 <img src="https://github.com/user-attachments/assets/4cae0548-1925-441c-9f90-4d97cc3f5099" alt="Splash and Onboarding Screen" width="290"/>
 
 ### Authentication
