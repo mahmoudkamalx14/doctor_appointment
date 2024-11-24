@@ -1,7 +1,6 @@
 import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
-
 import '../../../data/models/specialization_response_model.dart';
 import 'doctor_list_view_item.dart';
 

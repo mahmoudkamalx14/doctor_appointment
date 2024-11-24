@@ -26,14 +26,11 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             hintText: 'Email',
             textInputType: TextInputType.emailAddress,
             validator: emailValidator,
-            //! mkelsafty1838@gmail.com
           ),
           verticalSpace(16),
           AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             hintText: 'Password',
-
-            //! Mk14@safty
             textInputType: TextInputType.visiblePassword,
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(

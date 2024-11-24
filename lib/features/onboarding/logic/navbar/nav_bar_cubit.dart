@@ -1,10 +1,10 @@
 import 'package:doctor_appointment/core/di/dependency_injection.dart';
-import 'package:doctor_appointment/features/appointment/appointments_screen.dart';
-import 'package:doctor_appointment/features/chats/messages_screen.dart';
+import 'package:doctor_appointment/features/appointment/presentation/screens/appointments_screen.dart';
+import 'package:doctor_appointment/features/chats/presentation/screens/messages_screen.dart';
 import 'package:doctor_appointment/features/home/logic/home_cubit.dart';
 import 'package:doctor_appointment/features/home/presentation/screen/home_screen.dart';
 import 'package:doctor_appointment/features/onboarding/logic/navbar/nav_bar_state.dart';
-import 'package:doctor_appointment/features/profile/profile_screen.dart';
+import 'package:doctor_appointment/features/profile/presentation/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

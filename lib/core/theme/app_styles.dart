@@ -79,6 +79,13 @@ class TextStyles {
     height: 0,
   );
 
+  static TextStyle style14Regluar = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: const Color(0xFF757575),
+    height: 0,
+  );
+
   static TextStyle font15GrayRegluar = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.regular,
@@ -107,9 +114,33 @@ class TextStyles {
     fontWeight: FontWeight.w700,
   );
 
+  static TextStyle style14Bold = TextStyle(
+    color: const Color(0xFF247CFF),
+    fontSize: 14.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w700,
+    height: 0,
+  );
+
+  static TextStyle style16SemiBold = TextStyle(
+    color: const Color(0xFF242424),
+    fontSize: 16.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+
   static TextStyle style18SemiBold = TextStyle(
     color: const Color(0xFF242424),
     fontSize: 18.sp,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
+
+  static TextStyle style20SemiBold = TextStyle(
+    color: const Color(0xFF242424),
+    fontSize: 20.sp,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
     height: 0,
