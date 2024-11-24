@@ -1,6 +1,7 @@
 import 'package:doctor_appointment/core/functions/get_doctor_image.dart';
 import 'package:doctor_appointment/core/helpers/spacing.dart';
 import 'package:doctor_appointment/core/theme/app_styles.dart';
+import 'package:doctor_appointment/features/home/presentation/screen/doctor_info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +18,14 @@ class DoctorsListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (builder) => DoctorInfoScreen(doctor: doctor),
+          ),
+        );
+      },
       child: SizedBox(
         height: 126.h,
         child: Row(

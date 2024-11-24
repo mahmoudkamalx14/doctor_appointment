@@ -11,9 +11,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   setupGetIt();
-  // Add this line
   await ScreenUtil.ensureScreenSize();
   await checkIfLoggedInUser();
+
   runApp(
     // DevicePreview(
     //   enabled: !kReleaseMode,
@@ -35,6 +35,5 @@ checkIfLoggedInUser() async {
 }
 
 //! dart run build_runner build --delete-conflicting-outputs
-
 
 //? dart run flutter_native_splash:create --path=flutter_native_splash.yaml

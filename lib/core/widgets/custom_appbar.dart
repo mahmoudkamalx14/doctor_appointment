@@ -9,11 +9,13 @@ class CustomAppBar extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.title,
+    this.image,
     this.icon,
   });
 
   final Function() onTap;
   final String title;
+  final String? image;
 
   final IconData? icon;
 
@@ -42,21 +44,12 @@ class CustomAppBar extends StatelessWidget {
         const Spacer(),
         Text(title, style: TextStyles.style18SemiBold),
         const Spacer(),
-        GestureDetector(
-          onTap: onTap,
-          child: Container(
-            width: 40.w,
-            height: 40.h,
-            decoration: ShapeDecoration(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                side: const BorderSide(width: 1, color: Color(0xFFECECEC)),
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-            ),
-            child: SvgPicture.asset('assets/images/dots.svg'),
-          ),
-        ),
+        image != null
+            ? GestureDetector(
+                onTap: onTap,
+                child: SvgPicture.asset(image!),
+              )
+            : SizedBox(width: 30.w),
       ],
     );
   }

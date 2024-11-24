@@ -19,7 +19,7 @@ class DoctorsShimmerLoading extends StatelessWidget {
           Text('Recommendation Doctor', style: TextStyles.style18SemiBold),
           verticalSpace(16),
           SizedBox(
-            height: 320.h,
+            height: 250.h,
             child: ListView.builder(
               itemCount: 3,
               scrollDirection: Axis.vertical,
